@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onKeyPressed="#keyInput" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="textCreation.SynthekstManager">
+   <children>
+      <GridPane layoutY="-8.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="285.0" minWidth="10.0" prefWidth="279.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="282.0" minWidth="10.0" prefWidth="174.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="198.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="237.0" minWidth="10.0" prefWidth="198.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="237.0" minWidth="10.0" prefWidth="198.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="237.0" minWidth="10.0" prefWidth="198.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="80.0" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="500.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="77.0" minHeight="10.0" prefHeight="61.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Pane layoutX="10.0" layoutY="520.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DBDBDB;" GridPane.columnSpan="2147483647" GridPane.rowSpan="2" />
+            <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DBDBDB;" GridPane.columnSpan="2147483647" GridPane.rowIndex="3" GridPane.rowSpan="2147483647" />
+            <TextArea disable="true" editable="false" maxWidth="1000.0" prefHeight="200.0" prefWidth="1000.0" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </GridPane.margin>
+               <effect>
+                  <Shadow />
+               </effect>
+            </TextArea>
+            <TextArea fx:id="txtBox" maxWidth="1000.0" prefHeight="236.0" prefWidth="1000.0" promptText="Copy-paste a long text into this text area and press 'Read Text In&quot;. Once the process is finished, press 'Create Text'." wrapText="true" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <GridPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </TextArea>
+            <Button fx:id="pdfCreationBtn" mnemonicParsing="false" onAction="#pdfCreationAct" prefHeight="57.0" prefWidth="158.0" text="Create Pdf" GridPane.columnIndex="5" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
+            </Button>
+            <GridPane GridPane.rowIndex="1">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <TextField fx:id="fieldAuthor">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                     <padding>
+                        <Insets bottom="3.0" top="3.0" />
+                     </padding>
+                  </TextField>
+                  <TextField fx:id="fieldWords" text="1000" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                     <padding>
+                        <Insets bottom="3.0" top="3.0" />
+                     </padding>
+                  </TextField>
+                  <Label onMouseClicked="#storeUserName" text="Author" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="Word count" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <TextField fx:id="fieldTitle" GridPane.rowIndex="1">
+                     <padding>
+                        <Insets bottom="3.0" top="3.0" />
+                     </padding>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </TextField>
+                  <Label onMouseClicked="#storeUserName" text="Title" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </Label>
+               </children>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </GridPane>
+            <ProgressBar fx:id="progressBar" maxWidth="1.7976931348623157E308" prefHeight="18.0" progress="0.0" visible="false" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin></ProgressBar>
+            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <GridPane.margin>
+                  <Insets left="2.0" right="2.0" />
+               </GridPane.margin>
+            </GridPane>
+            <GridPane GridPane.columnIndex="4" GridPane.rowIndex="1">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#replaceInTxtBox" text="replace" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <TextField fx:id="FieldReplFirst">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="FieldReplSec" GridPane.columnIndex="1">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                        </TextField>
+                     </children>
+                  </GridPane>
+               </children>
+               <GridPane.margin>
+                  <Insets left="2.0" right="2.0" />
+               </GridPane.margin>
+            </GridPane>
+            <MenuBar maxWidth="1.7976931348623157E308" prefHeight="56.0" prefWidth="651.0" GridPane.columnSpan="2147483647">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                        <MenuItem mnemonicParsing="false" onAction="#saveTxtFile" text="save Txt File" />
+                        <MenuItem mnemonicParsing="false" onAction="#openReadIn" text="open ReadIn" />
+                        <MenuItem mnemonicParsing="false" onAction="#getPdfText" text="pdf to TextBox" />
+                  </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="Vocabulary">
+                     <items>
+                    <MenuItem mnemonicParsing="false" onAction="#openVocab" text="open voc folder" />
+                        <MenuItem mnemonicParsing="false" onAction="#copyVocab" text="save voc" />
+                        <MenuItem mnemonicParsing="false" onAction="#deleteVocab" text="delete voc" />
+                        <MenuItem mnemonicParsing="false" onAction="#checkVocab" text="check voc" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Text">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#clearTextBox" text="clear" />
+                        <MenuItem mnemonicParsing="false" onAction="#addParagraphsThread" text="add ¶" />
+                        <MenuItem mnemonicParsing="false" onAction="#removeParagraphsThread" text="remove ¶" />
+                        <MenuItem mnemonicParsing="false" onAction="#completeBracketsThread" text="complete {[()]}&quot;&quot;" />
+                        <MenuItem mnemonicParsing="false" onAction="#removeSpecialSigns" text="remove (){}[]&quot;" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Text++">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#countWords" text="count words" />
+                        <MenuItem mnemonicParsing="false" onAction="#toUppercase" text="to uppercase" />
+                        <MenuItem mnemonicParsing="false" onAction="#toLowercase" text="to lowercase" />
+                        <MenuItem mnemonicParsing="false" onAction="#randtxtCreationAct" text="create random text" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Convert">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#uniTextConversionThread" text="to Uni2016gh" />
+                        <MenuItem mnemonicParsing="false" onAction="#binaryTextConversion" text="to binary" />
+                        <MenuItem mnemonicParsing="false" onAction="#txtBoxToHex" text="to hex" />
+                        <MenuItem mnemonicParsing="false" onAction="#txtBoxFromHex" text="from hex" />
+                     </items>
+                  </Menu>
+                <Menu mnemonicParsing="false" text="Log">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#openLog" text="open" />
+                        <MenuItem mnemonicParsing="false" onAction="#clearLog" text="clear" />
+                        <MenuItem mnemonicParsing="false" onAction="#writeToLog" text="write to" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                        <MenuItem mnemonicParsing="false" onAction="#openReadme" text="open ReadMe" />
+                    <MenuItem mnemonicParsing="false" onAction="#showAboutInfo" text="about" />
+                        <MenuItem mnemonicParsing="false" onAction="#goToWebsite" text="visit website" />
+                  </items>
+                </Menu>
+              </menus>
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+            </MenuBar>
+            <Label fx:id="progressBarLabel" text="Progress Bar Label" textFill="#8a8a8a" visible="false" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Label>
+            <Button mnemonicParsing="false" onAction="#txtCreationAct" prefHeight="57.0" prefWidth="158.0" text="Create Text" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets right="2.0" />
+               </GridPane.margin></Button>
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#textReadInProcess" prefHeight="57.0" prefWidth="158.0" text="↓ Read Text In" GridPane.halignment="LEFT" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Button>
+            <GridPane GridPane.columnIndex="5" GridPane.rowIndex="1">
+               <children>
+                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#getPdfsInBrowser" text="Get pdf's" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Button>
+                  <TextField fx:id="fieldGetPdfs" maxWidth="1.7976931348623157E308">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </TextField>
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="52.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <GridPane.margin>
+                  <Insets left="2.0" right="10.0" />
+               </GridPane.margin>
+            </GridPane>
+            <GridPane GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <children>
+                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#loadTextFromWebsite" prefHeight="25.0" text="Load text from URL" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Button>
+                  <TextField fx:id="fieldUrl">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </TextField>
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="74.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <GridPane.margin>
+                  <Insets left="2.0" right="2.0" />
+               </GridPane.margin>
+            </GridPane>
+            <CheckBox fx:id="isLatexCode" mnemonicParsing="false" text="Latex code" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets right="2.0" />
+               </GridPane.margin></CheckBox>
+            <GridPane GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="ALWAYS" />
+                <ColumnConstraints hgrow="SOMETIMES" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <RadioButton fx:id="domain1" mnemonicParsing="false" selected="true" text="this domain" GridPane.columnIndex="1" GridPane.valignment="BOTTOM">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="urlContent" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="domain2" mnemonicParsing="false" text="domain links" toggleGroup="$urlContent" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <RadioButton fx:id="domain3" mnemonicParsing="false" text="all links" toggleGroup="$urlContent" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.valignment="TOP" />
+               </children>
+            </GridPane>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

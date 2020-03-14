@@ -7,6 +7,8 @@ You can download the full program here: http://www.mediafire.com/file/k26798i3hw
 
 See the program in use here: https://youtu.be/7Cgx8B7blqU
 
+Here's a user-friendly Windows installer for the program: https://www.mediafire.com/file/jatz2s637jzjv7t/synthekst-setup.exe/file
+
 ![Reading in text with Synthekst](screenshot/scr_synthekst_1.jpg?raw=true "Reading in text with Synthekst")
 Reading in a text from a PDF.
 

@@ -1,5 +1,5 @@
 # Synthekst
-A program which creates a synthetic text based on real input. 
+A JavaFX program which creates a synthetic text based on real input. 
 Read in pdf & text files or scrape the text from a website to use it as an input text. 
 Enables you to create TXT and PDF files as well as Latex code. 
 

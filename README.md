@@ -11,6 +11,6 @@ Here's a user-friendly Windows installer for the program: https://www.mediafire.
 
 ![Reading in text with Synthekst](screenshot/scr_synthekst_1.jpg?raw=true "Reading in text with Synthekst")
 <p align="center">Reading in a text from a PDF.</p>
-
+<br><br>
 ![Text creation and vocabulary evaluation](screenshot/scr_synthekst_2.jpg?raw=true "Text creation and vocabulary evaluation")
 <p align="center">Vocabulary check in Synthekst and created text in the background.</p>
